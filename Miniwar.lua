@@ -10,7 +10,7 @@ function BuyShop()
                 item = "AntimatterReactor",
                 shop = "Farm"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
@@ -21,7 +21,7 @@ function BuyShop()
                 item = "QuantumCoreGenerator",
                 shop = "Farm"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
@@ -32,7 +32,7 @@ function BuyShop()
                 item = "SupernovaAccelerator",
                 shop = "Farm"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
@@ -43,7 +43,7 @@ function BuyShop()
                 item = "GrandHotel",
                 shop = "House"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
@@ -54,7 +54,7 @@ function BuyShop()
                 item = "SpiderBase",
                 shop = "Military"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
@@ -65,7 +65,7 @@ function BuyShop()
                 item = "AirFortress",
                 shop = "Military"
             },
-            " "
+            "\031"
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
