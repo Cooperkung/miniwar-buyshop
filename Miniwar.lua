@@ -107,7 +107,7 @@ function BuyGemShop()
     wait(0.1)
 end
 
-local buyshopp = true
+local buyshopp = _G.config.BuyMoneyShop
 
 task.spawn(function()
     while true do
@@ -129,7 +129,7 @@ Section:NewToggle("Buy Shop", "Buy Kaitun Normal Shop", function(state)
     end
 end)
 
-local buygemshopp = true
+local buygemshopp = _G.config.BuyGemShop
 
 task.spawn(function()
     while true do
