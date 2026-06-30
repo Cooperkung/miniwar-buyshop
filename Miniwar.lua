@@ -3,6 +3,18 @@ local Window = Library.CreateLib("CooperHub | Premium Script", "GrapeTheme")
 local Tab = Window:NewTab("Menu")
 local Section = Tab:NewSection("Active Menu")
 
+local buyshopp = _G.config.BuyMoneyShop
+local args = {
+	{
+		{
+			item = "AntimatterReactor",
+			shop = "Farm"
+		},
+		" "
+	}
+}
+game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+
 function BuyShop()
     local args = {
         {
@@ -14,7 +26,18 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    local args = {
+        {
+            {
+                item = "AntimatterReactor",
+                shop = "Farm"
+            },
+            " "
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
+
     local args = {
         {
             {
@@ -25,7 +48,18 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    local args = {
+        {
+            {
+                item = "QuantumCoreGenerator",
+                shop = "Farm"
+            },
+            " "
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
+
     local args = {
         {
             {
@@ -36,7 +70,18 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    local args = {
+        {
+            {
+                item = "SupernovaAccelerator",
+                shop = "Farm"
+            },
+            " "
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
+
     local args = {
         {
             {
@@ -47,11 +92,44 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    local args = {
+        {
+            {
+                item = "GrandHotel",
+                shop = "House"
+            },
+            " "
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
+
     local args = {
         {
             {
                 item = "SpiderBase",
+                shop = "Military"
+            },
+            "\031"
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    local args = {
+        {
+            {
+                item = "SpiderBase",
+                shop = "Military"
+            },
+            " "
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    wait(0.1)
+
+    local args = {
+        {
+            {
+                item = "AirFortress",
                 shop = "Military"
             },
             "\031"
@@ -65,10 +143,11 @@ function BuyShop()
                 item = "AirFortress",
                 shop = "Military"
             },
-            "\031"
+            " "
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+
 end
 
 function BuyGemShop()
@@ -107,7 +186,7 @@ function BuyGemShop()
     wait(0.1)
 end
 
-local buyshopp = _G.config.BuyMoneyShop
+
 
 task.spawn(function()
     while true do
