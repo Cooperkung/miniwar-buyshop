@@ -4,8 +4,6 @@ local Tab = Window:NewTab("Menu")
 local Section = Tab:NewSection("Active Menu")
 
 local buyshopp = _G.config.BuyMoneyShop
-game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-
 function BuyShop()
     local args = {
         {
