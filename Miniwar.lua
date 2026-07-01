@@ -19,6 +19,7 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
     local args = {
         {
             {
@@ -30,7 +31,6 @@ function BuyFactoryShop()
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
-
     local args = {
         {
             {
@@ -41,6 +41,7 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
     local args = {
         {
             {
@@ -51,6 +52,7 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
 end
 
 
@@ -67,6 +69,7 @@ function BuyHouseShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
     local args = {
         {
             {
@@ -77,6 +80,7 @@ function BuyHouseShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
 end
 
 function BuyMilitaryShop()
@@ -90,6 +94,7 @@ function BuyMilitaryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+	wait(0.1)
     local args = {
         {
             {
@@ -101,7 +106,6 @@ function BuyMilitaryShop()
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
-
     local args = {
         {
             {
@@ -123,7 +127,7 @@ function BuyMilitaryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-
+	wait(0.1)
 end
 
 
