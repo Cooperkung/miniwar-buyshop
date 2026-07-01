@@ -136,17 +136,6 @@ function BuyGemShop()
     local args = {
         {
             {
-                item = "GemMine",
-                shop = "BlackMarket"
-            },
-            "T"
-        }
-    }
-    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-    wait(0.1)
-    local args = {
-        {
-            {
                 item = "CloneFacility",
                 shop = "BlackMarket"
             },
