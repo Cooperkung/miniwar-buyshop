@@ -6,7 +6,8 @@ local Section = Tab:NewSection("Active Menu")
 local buyfactoryshopp = _G.config.BuyFactoryShop
 local buyhouseshopp = _G.config.BuyHouseShop
 local buymilitaryshopp = _G.config.BuyMilitaryShop
-local buygemshopp = _G.config.BuyGemShop
+local buygemminershopp = _G.config.BuyGemMinerShop
+local buygemcloneshopp = _G.config.BuyGemCloneShop
 
 function BuyFactoryShop()
     local args = {
@@ -19,7 +20,7 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
     local args = {
         {
             {
@@ -41,7 +42,7 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
     local args = {
         {
             {
@@ -52,10 +53,8 @@ function BuyFactoryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
 end
-
-
 
 
 function BuyHouseShop()
@@ -69,7 +68,7 @@ function BuyHouseShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
     local args = {
         {
             {
@@ -80,7 +79,7 @@ function BuyHouseShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
 end
 
 function BuyMilitaryShop()
@@ -94,7 +93,7 @@ function BuyMilitaryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
     local args = {
         {
             {
@@ -127,12 +126,28 @@ function BuyMilitaryShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-	wait(0.1)
+    wait(0.1)
+    
 end
 
 
 
-function BuyGemShop()
+function BuyGemMinerShop()
+    local args = {
+        {
+            {
+                item = "GemMine",
+                shop = "BlackMarket"
+            },
+            "T"
+        }
+    }
+    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
+    wait(0.1)
+end
+
+
+function BuyGemCloneShop()
     local args = {
         {
             {
@@ -156,7 +171,6 @@ function BuyGemShop()
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
     wait(0.1)
 end
-
 
 
 task.spawn(function()
@@ -224,8 +238,8 @@ end)
 
 task.spawn(function()
     while true do
-        if buygemshopp then
-            BuyGemShop()
+        if buygemminershopp then
+            BuyGemMinerShop()
         end
         task.wait(0.01)
     end
@@ -235,13 +249,33 @@ end)
 Section:NewToggle("Buy Gem Shop", "Buy Kaitun Gem Shop", function(state)
     if state then
         print("Toggle On")
-        buygemshopp = true
+        buygemminershopp = true
     else
         print("Toggle Off")
-        buygemshopp = false
+        buygemminershopp = false
     end
 end)
 
+
+task.spawn(function()
+    while true do
+        if buygemcloneshopp then
+            BuyGemCloneShop()
+        end
+        task.wait(0.01)
+    end
+end)
+
+-- Toggle UI
+Section:NewToggle("Buy Gem Shop", "Buy Kaitun Gem Shop", function(state)
+    if state then
+        print("Toggle On")
+        buygemcloneshopp = true
+    else
+        print("Toggle Off")
+        buygemcloneshopp = false
+    end
+end)
 
 --UI TOGGLE
 local Tab = Window:NewTab("Miscellaneous")
