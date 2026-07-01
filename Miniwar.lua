@@ -3,30 +3,12 @@ local Window = Library.CreateLib("CooperHub | Premium Script", "GrapeTheme")
 local Tab = Window:NewTab("Menu")
 local Section = Tab:NewSection("Active Menu")
 
-local buyshopp = _G.config.BuyMoneyShop
-function BuyShop()
-    local args = {
-        {
-            {
-                item = "AntimatterReactor",
-                shop = "Farm"
-            },
-            "\031"
-        }
-    }
-    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-    local args = {
-        {
-            {
-                item = "AntimatterReactor",
-                shop = "Farm"
-            },
-            " "
-        }
-    }
-    game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-    wait(0.1)
+local buyfactoryshopp = _G.config.BuyFactoryShop
+local buyhouseshopp = _G.config.BuyHouseShop
+local buymilitaryshopp = _G.config.BuyMilitaryShop
+local buygemshopp = _G.config.BuyGemShop
 
+function BuyFactoryShop()
     local args = {
         {
             {
@@ -69,8 +51,12 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-    wait(0.1)
+end
 
+
+
+
+function BuyHouseShop()
     local args = {
         {
             {
@@ -91,8 +77,9 @@ function BuyShop()
         }
     }
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
-    wait(0.1)
+end
 
+function BuyMilitaryShop()
     local args = {
         {
             {
@@ -138,6 +125,8 @@ function BuyShop()
     game:GetService("ReplicatedStorage"):WaitForChild("ncxyzero_bridgenet2-fork@1.1.5"):WaitForChild("dataRemoteEvent"):FireServer(unpack(args))
 
 end
+
+
 
 function BuyGemShop()
     local args = {
@@ -179,25 +168,66 @@ end
 
 task.spawn(function()
     while true do
-        if buyshopp then
-            BuyShop()
+        if buyfactoryshopp then
+            BuyFactoryShop()
         end
         task.wait(0.01)
     end
 end)
 
 -- Toggle UI
-Section:NewToggle("Buy Shop", "Buy Kaitun Normal Shop", function(state)
+Section:NewToggle("Buy Factory Shop", "Buy Factory Shop", function(state)
     if state then
         print("Toggle On")
-        buyshopp = true
+        buyfactoryshopp = true
     else
         print("Toggle Off")
-        buyshopp = false
+        buyfactoryshopp = false
     end
 end)
 
-local buygemshopp = _G.config.BuyGemShop
+
+task.spawn(function()
+    while true do
+        if buyhouseshopp then
+            BuyHouseShop()
+        end
+        task.wait(0.01)
+    end
+end)
+
+-- Toggle UI
+Section:NewToggle("Buy House Shop", "Buy House Shop", function(state)
+    if state then
+        print("Toggle On")
+        buyhouseshopp = true
+    else
+        print("Toggle Off")
+        buyhouseshopp = false
+    end
+end)
+
+
+task.spawn(function()
+    while true do
+        if buymilitaryshopp then
+            BuyMilitaryShop()
+        end
+        task.wait(0.01)
+    end
+end)
+
+-- Toggle UI
+Section:NewToggle("Buy Military Shop", "Buy Military Shop", function(state)
+    if state then
+        print("Toggle On")
+        buymilitaryshopp = true
+    else
+        print("Toggle Off")
+        buymilitaryshopp = false
+    end
+end)
+
 
 task.spawn(function()
     while true do
